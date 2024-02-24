@@ -1,4 +1,4 @@
-#### API de autentificação por cookies feito com Go e SQlite 3
+#### API de autenticação por cookies feito com Go e SQlite 3
 
 ###### Como usar?
 

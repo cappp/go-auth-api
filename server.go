@@ -40,8 +40,7 @@ func main() {
 	router := gin.Default()
 
 	router.GET("/", func(ctx *gin.Context) {
-		_, err := ctx.Cookie("logado")
-		if err != nil {
+		if _, err = ctx.Cookie("logado"); err != nil {
 			ctx.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "mensagem": "E ai piva. Você não tá logado."})
 			return
 		}

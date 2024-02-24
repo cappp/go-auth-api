@@ -52,7 +52,7 @@ func main() {
 			ctx.JSON(http.StatusUnauthorized, gin.H{"status": http.StatusUnauthorized, "mensagem": "Você não tá logado."})
 			return
 		}
-		ctx.SetCookie("logado", "", 3600, "/", "localhost", false, false)
+		ctx.SetCookie("logado", "", -1, "/", "localhost", false, false)
 		ctx.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "mensagem": "Você foi deslogado com sucesso."})
 	})
 

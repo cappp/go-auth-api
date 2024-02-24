@@ -1,4 +1,4 @@
-#### API de autenticação por cookies feito com Go e SQLite 3
+#### API de autenticação por cookies feito com Go, Gin e SQLite 3
 
 ###### Como usar?
 
@@ -31,7 +31,7 @@ curl -c cookies.txt -b cookies.txt -d '{"username": "abc", "password": "def"}' -
 ```
 - Signup (cadastrar):
 ```sh
-curl -c cookies.txt -b cookies.txt -d '{"name": "x", username": "y", "password": "z"}' -X POST http://localhost:3000/signup
+curl -c cookies.txt -b cookies.txt -d '{"name": "x", "username": "y", "password": "z"}' -X POST http://localhost:3000/signup
 ```
 - Logout (deslogar):
 ```sh

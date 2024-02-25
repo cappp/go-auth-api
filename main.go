@@ -101,7 +101,7 @@ func main() {
 
 		if err := ctx.ShouldBindJSON(&user); err != nil {
 			log.Println(err)
-			ctx.JSON(http.StatusBadRequest, gin.H{"mensagem": "Tá errado isso aí viu."})
+			ctx.JSON(http.StatusBadRequest, gin.H{"status": http.StatusBadRequest, "mensagem": "Tá errado isso aí viu."})
 			return
 		}
 

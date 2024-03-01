@@ -32,7 +32,12 @@ func CheckPasswordHash(password, hash string) bool {
 }
 
 func main() {
+	os.Remove("./users.db")
 	db, err := sql.Open("sqlite3", "./users.db")
+	if err != nil {
+		log.Fatal(err)
+	}
+	_, err = db.Exec("create table users (name text, username text, password text)")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -41,7 +46,7 @@ func main() {
 
 	router.GET("/", func(ctx *gin.Context) {
 		if _, err = ctx.Cookie("logado"); err != nil {
-			ctx.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "mensagem": "E ai piva. Você não tá logado."})
+			ctx.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "mensagem": "E aí piva. Você não tá logado."})
 			return
 		}
 		ctx.JSON(http.StatusOK, gin.H{"status": http.StatusOK, "mensagem": "E aí piva. Você tá logado."})

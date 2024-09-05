@@ -16,7 +16,7 @@ Agora execute o projeto:
 go run .
 ```
 
-Acesse: [http://localhost:3000](http://localhost:3000) para ver a página inicial.
+Acesse [http://localhost:3000](http://localhost:3000) para ver a página inicial.
 
 ###### Fazendo chamadas a API
 
@@ -29,10 +29,12 @@ curl -c cookies.txt -b cookies.txt -X GET http://localhost:3000/
 ```sh
 curl -c cookies.txt -b cookies.txt -d '{"username": "abc", "password": "def"}' -X POST http://localhost:3000/login
 ```
+
 - Signup (cadastrar):
 ```sh
 curl -c cookies.txt -b cookies.txt -d '{"name": "x", "username": "y", "password": "z"}' -X POST http://localhost:3000/signup
 ```
+
 - Logout (sair):
 ```sh
 curl -c cookies.txt -b cookies.txt -X GET http://localhost:3000/logout

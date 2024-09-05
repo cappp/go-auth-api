@@ -25,7 +25,7 @@ Acesse: [http://localhost:3000](http://localhost:3000) para ver a página inicia
 curl -c cookies.txt -b cookies.txt -X GET http://localhost:3000/
 ```
 
-- Login:
+- Login (entrar):
 ```sh
 curl -c cookies.txt -b cookies.txt -d '{"username": "abc", "password": "def"}' -X POST http://localhost:3000/login
 ```
@@ -33,7 +33,7 @@ curl -c cookies.txt -b cookies.txt -d '{"username": "abc", "password": "def"}' -
 ```sh
 curl -c cookies.txt -b cookies.txt -d '{"name": "x", "username": "y", "password": "z"}' -X POST http://localhost:3000/signup
 ```
-- Logout (deslogar):
+- Logout (sair):
 ```sh
 curl -c cookies.txt -b cookies.txt -X GET http://localhost:3000/logout
 ```
